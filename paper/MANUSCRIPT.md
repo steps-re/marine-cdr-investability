@@ -66,7 +66,7 @@ We generate no new climate simulations. We sample the published Zhou et al. (202
 The author is affiliated with Steps Ventures, an investment entity with a potential interest in marine-CDR outcomes, and maintains a public interactive tool derived from this analysis. The analysis reuses third-party published data and code and reports uncertainty transparently; readers are directed to the released repository to inspect all priors and reproduce every figure.
 
 ## Data and code availability
-Efficiency field: Zhou et al. 2024 / [C]Worthy Global OAE Efficiency Atlas (source.coop/cworthy/oae-efficiency-atlas). EEZ boundaries: Marine Regions (VLIZ). The deployment-geography dataset compiled here, all Monte-Carlo priors, and the analysis and figure code are released at a public repository (to be linked on submission). Author contributions: sole author (co-authorship with an oceanographic collaborator to be added before submission).
+Efficiency field: Zhou et al. 2024 / [C]Worthy Global OAE Efficiency Atlas (source.coop/cworthy/oae-efficiency-atlas). EEZ boundaries: Marine Regions (VLIZ). The deployment-geography dataset compiled here, all Monte-Carlo priors, and the analysis and figure code are released at https://github.com/steps-re/marine-cdr-investability (MIT/CC-BY). Author contributions: sole author (co-authorship with an oceanographic collaborator to be added before submission).
 
 ---
 
