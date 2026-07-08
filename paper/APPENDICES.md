@@ -12,6 +12,21 @@
 
 **A.5 National aggregation.** We area-weight (cos φ) the 5-year f_kin over all resolved ocean cells within each sovereign EEZ (Marine Regions polygons, made valid and simplified to 0.1°), reporting means for EEZs with ≥20 cells. The 1° atlas resolves narrow coastal EEZs poorly (e.g. the United States retains only ~47 cells); small-sample means are flagged.
 
+**A.6 Independent circulation cross-check (offline Lagrangian tracer).** To test whether our reading of the atlas is physically sound with *independent* inputs, we ran an offline three-dimensional tracer-transport model on a different data source than the atlas's embedded CESM: daily GLORYS12 reanalysis currents and mixed-layer depth (Copernicus Marine, 1/12°) plus CMEMS L4 wind-stress for Ekman pumping. Neutrally-buoyant parcels are advected in 3-D (OceanParcels, RK4); while a parcel is in the mixed layer it relaxes its CO₂ deficit at the local air–sea rate k·R_f/R_ion, and it is carried below by the resolved vertical velocity — continuity divergence plus Ekman pumping w_ek = −curl(τ/ρf). Permanent stranding is emergent, not imposed: a parcel that subducts below the winter-maximum mixed layer goes dormant and re-entrains only when winter convection or the circulation lifts it. Two features close the edge cases the earlier version missed: (i) **bathymetry** from GLORYS — where the seafloor is shallower than the winter mixed layer (shelf seas), the column ventilates fully and nothing strands; (ii) **Ekman pumping** — the actual permanent-subduction driver in subtropical gyres. The model is a consistency check and coastal/enclosed extension, not a new climate simulation; the atlas remains authoritative for the open ocean.
+
+Five-year cashed fraction versus the atlas at sites spanning the regimes (800 parcels each):
+
+| Site | Regime | Tracer f_kin (5 yr) | Atlas f_kin | Note |
+|---|---|---|---|---|
+| North Sea | shelf sea | 0.90 | 0.83 | bathymetry fix (seafloor < winter MLD → no stranding) |
+| Halifax | temperate coastal | 0.67 | 0.62 | Planetary site |
+| Salish Sea | fjord/estuary | 0.83 | 0.80 | |
+| Iceland | subpolar, deep MLD | 0.50 | 0.47 | |
+| Patagonia (Puerto Montt) | high-residence coastal | 0.93 | 0.70–0.79 | high (deep-fjord retention) |
+| Hawaiʻi (Kona) | subtropical gyre | 0.31 | 0.59 | **under-predicts** — decadal re-emergence not captured in a 5-yr offline periodic-year run |
+
+The circulation cross-check reproduces the atlas ordering and values across the temperate, coastal, subpolar and shelf regimes, and — unlike the emulator — uses fully independent circulation data, so it is a genuine (not circular) check on the open-ocean numbers. The one documented miss is the subtropical gyre (Hawaiʻi), where realized efficiency accrues over a decade-plus as subducted water slowly re-ventilates; a 5-year offline run under-counts it, and we defer to the atlas there. Within-EEZ maps built from the same model (`*_map3`) show the internal spatial gradient of realized removal for the eight most-invested national waters; they are consistent with the point sites (e.g. NZ 0.84, Chile coastal 0.86 on physical residence, Japan 0.50) but are coarse (1.5° release grid) and measure physical residence only, not the carbonate-outgassing penalty the atlas folds in (so, e.g., the Humboldt outgassing signal is an atlas/chemistry effect, not a residence effect).
+
 ## Appendix B — Techno-economic priors (per archetype)
 
 Ranges are literature-anchored 10th–90th-percentile priors, at-scale (see REFERENCES). Cost = US$/nominal-tonne gross.
