@@ -1,0 +1,7 @@
+method,sensitive,cost_gross_median,breakeven_fkin@$100,breakeven_fkin@$200,breakeven_fkin@$350
+Mineral OAE,True,69.0,>1 (never),0.68,0.4
+Electrochemical OAE,True,109.0,>1 (never),0.92,0.52
+DOC / DIC stripping,False,197.0,n/a,n/a,insensitive
+Marine biomass sinking,True,1073.0,>1 (never),>1 (never),>1 (never)
+Terrestrial burial (control),False,41.0,insensitive,insensitive,insensitive
+Iron fertilization,True,467.0,>1 (never),>1 (never),>1 (never)

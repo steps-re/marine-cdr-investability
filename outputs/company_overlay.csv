@@ -1,0 +1,10 @@
+company,method,lat,fkin_5yr_med,fkin_10_90,breakeven_fkin@350,P(inv@200),P(inv@350),binding_constraint
+Ebb Carbon,Electrochemical OAE,48.1,0.76,0.57-0.89,0.52,0.34,0.76,clears
+Planetary,Electrochemical OAE,44.6,0.64,0.41-0.81,0.52,0.24,0.63,clears
+Vesta,Mineral OAE,36.2,0.73,0.52-0.87,0.38,0.53,0.81,clears
+Captura,DOC / DIC stripping,19.7,1.0,1.00-1.00,exempt,0.31,0.69,clears
+Equatic,DOC / DIC stripping,1.3,1.0,1.00-1.00,exempt,0.31,0.7,clears
+SeaO2,DOC / DIC stripping,52.0,1.0,1.00-1.00,exempt,0.31,0.69,clears
+Gigablue,Iron fertilization,-35.0,0.7,0.49-0.85,>1,0.0,0.02,COST (never clears)
+Running Tide,Marine biomass sinking,63.0,0.38,0.20-0.60,>1,0.0,0.0,COST (never clears)
+Carboniferous,Terrestrial burial (control),27.0,1.0,1.00-1.00,exempt,0.95,0.99,clears
