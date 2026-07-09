@@ -1,0 +1,12 @@
+water_body,regime,depth_m,residence_d,k_m_per_day,R_ion,Revelle,tau_eq_days,equilibration_eff,freshwater,note
+Baltic Proper,brackish sea,15.0,10950.0,2.72,45.0,23.6,10.6,0.999,False,low natural TA -> flagged OAE-favorable; R_f~20-25
+Caspian Sea,endorheic,20.0,91250.0,2.5,142.0,15.0,76.0,0.999,False,"CO2 SOURCE, non-marine carbonate; cautionary not candidate"
+Lake Superior,freshwater lake,15.0,69715.0,1.21,201.0,17.2,144.6,0.998,True,soft/low-DIC; near-neutral weak source; FW Revelle caveat
+Mediterranean,marginal sea,20.0,36500.0,2.5,152.0,10.0,121.6,0.997,False,OAE-favorable; modeled 2x uptake/30yr (Butenschon2021)
+Lake Michigan,freshwater lake,20.0,29200.0,1.5,149.0,19.1,104.6,0.996,True,HARD water near CaCO3 sat -> precipitation risk; CO2 source
+Black Sea (surface),enclosed sea,20.0,3650.0,2.86,145.0,14.1,71.8,0.981,False,permanent halocline; weakening sink -> seasonal source
+Temperate river,river,1.5,2.0,15.0,12.0,11.7,0.1,0.95,True,turbulence-driven k~10x; supersaturated -> prompt re-evasion
+Mississippi (lower),large river,12.0,10.0,14.6,11.0,10.9,0.9,0.921,True,always CO2-supersaturated; velocity-based k
+UK chalk river,river,0.8,0.3,20.0,21.0,18.3,0.0,0.868,True,high chalk TA but freshwater; strong CO2 source
+Wastewater outfall,engineered,5.0,10.0,12.0,687.0,10.0,28.8,0.258,True,CREW: limestone->bicarb; downstream re-emission is MRV problem
+Desal brine outfall,engineered,10.0,0.2,1.57,185.0,8.8,133.4,0.001,False,hypersaline high-Revelle; DIC/TA poorly constrained

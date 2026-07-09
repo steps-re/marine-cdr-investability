@@ -1,0 +1,12 @@
+site,exp_return,minvar_weight,best_sharpe_weight
+north_sea,0.031,0.282,0.282
+duck_nc,0.0211,0.183,0.183
+salish,0.0298,0.171,0.171
+singapore,0.0213,0.09,0.09
+puerto_montt,0.039,0.055,0.055
+iceland,0.0192,0.048,0.048
+karsto,0.0223,0.044,0.044
+gulf_maine,0.0215,0.043,0.043
+black_sea,0.0388,0.039,0.039
+kona,0.0089,0.038,0.038
+halifax,0.0137,0.009,0.009

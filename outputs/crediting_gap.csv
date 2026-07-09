@@ -1,0 +1,4 @@
+issuer,pathway,issued_t,realized_frac_at_issue,realized_t,basis
+"Planetary (OAE, Halifax)",electrochemical OAE,4854,0.55,2670.0,Isometric; first batch stated >50% of expected uptake; full over 10-15 yr
+CREW (wastewater WAE),wastewater alkalinity,104,0.85,88.0,Isometric WAE; near-field inlet/outlet measured; accounts for downstream loss
+CarbonRun (river RAE),river alkalinity,76,0.55,42.0,Isometric RAE; issued from Norway trial; river systems re-evade fast

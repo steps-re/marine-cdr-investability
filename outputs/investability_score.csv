@@ -1,0 +1,10 @@
+company,site,contracted_t,note,realization_V,issuance,safe_dose,cv_pct,tau_flush_yr,reliability,score
+CarbonRun,karsto,55442,river/Norway,0.719,0.053,300.0,16.4,8.1,0.859106529209622,54.3
+Gigablue,puerto_montt,200000,open-ocean sinking (no coastal site; proxy),,0.043,270.0,2.7,159.0,0.9737098344693282,53.4
+Planetary,halifax,115211,OAE Halifax,0.998,0.041,300.0,9.0,19.6,0.9174311926605504,48.1
+Ebb,salish,1333,OAE Salish (firm only),0.436,0.041,290.0,16.4,7.8,0.859106529209622,26.0
+CREW,black_sea,71878,wastewater (near-field; site=enclosed proxy),0.526,0.043,260.0,8.0,,0.9259259259259258,23.5
+Vesta,duck_nc,3333,coastal weathering Duck NC,0.358,0.043,200.0,9.8,2.4,0.9107468123861566,23.5
+SeaO2,north_sea,5000,OAE North Sea,0.463,0.044,290.0,19.9,0.9,0.8340283569641367,12.2
+RunningTide,iceland,32500,biomass sinking Iceland (defunct),0.279,0.042,310.0,20.3,1.7,0.8312551953449708,9.5
+Captura,kona,30558,DOC Kona,,0.04,160.0,19.3,4.6,0.8382229673093042,6.9
