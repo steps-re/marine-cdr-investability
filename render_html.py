@@ -15,6 +15,10 @@ FIG_AT = {  # anchor text (in manuscript) -> figure file, caption
     "fig_issuance_risk_v2": ("fig_issuance_risk_v2.png", "Figure 4. The dominant near-term gate: probability a project actually gets credits issued, by pathway. Only Planetary has ever issued mCDR credits; ~0.3% of contracted volume issued. This multiplies conditional investability down to low-single-digit unconditional probabilities."),
     "fig_eez_bars": ("fig_eez_bars.png", "Figure 5. National EEZ mean 5-yr efficiency, colored by investment level. Chile (0.32) invests where its waters are least favorable; the best-endowed EEZs are largely uninvested. Small-sample EEZs are indicative only."),
     "fig_eez_map": ("fig_eez_map.png", "Figure 5b. Global choropleth of EEZ mean efficiency with engineered-mCDR investors marked."),
+    "fig_carbonate_envelope": ("fig_carbonate_envelope.png", "Figure 6. Carbonate ceiling and safe-dose envelope per site (Appendix A.7 i). Left: the attainable-efficiency ceiling eta_max, higher in cold water. Right: aragonite saturation versus instantaneous alkalinity dose; the steeper warm-water curves hit the runaway threshold (Omega=5) far sooner, capping the per-deployment dose."),
+    "fig_delivery_risk": ("fig_delivery_risk.png", "Figure 7. Delivery-risk: mean realized removal with its interannual P10-P90 spread across forcing years 2011-2020 (Appendix A.7 ii). Wide bars / high CV mark sites whose year-to-year delivery an offtaker must underwrite; absolute levels are monthly-forced and biased low, so the spread is the signal."),
+    "fig_mrv_plume": ("fig_mrv_plume.png", "Figure 8. Site-level MRV verifiability from the real dispersing plume (Appendix A.7 iii): detectable window x containment -> implied issuance probability. Low everywhere, marginally best in contained settings; verification is the binding gate at site resolution."),
+    "fig_season_sweep": ("fig_season_sweep.png", "Figure 9. Deployment-timing sweep (Appendix A.7 iv): realized removal by release quarter. Large seasonal swings at some sites (dose into the deep winter mixed layer, not the summer lid), negligible at deep-mixing sites."),
 }
 
 
