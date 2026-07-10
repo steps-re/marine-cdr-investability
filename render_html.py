@@ -28,6 +28,8 @@ FIG_AT = {  # anchor text (in manuscript) -> figure file, caption
     "fig_composite_viability": ("fig_composite_viability.png", "Figure 16. Global verifiable-realization potential V = [tau_flush/(tau_flush+tau_eq)] x eta_max (Appendix I.6): where the ocean cashes the check where it can be seen. Triangles = real deployments."),
     "fig_investability_score": ("fig_investability_score.png", "Figure 17. Integrated 0-100 investability score by deployment, fusing realization, verifiability, capacity, reliability and retention (Appendix I.7). ~13% of announced contracted volume sits in below-median-score waters."),
     "fig_portfolio": ("fig_portfolio.png", "Figure 18. CDR siting as a risk-return portfolio (Appendix I.7). Because sites' interannual variability is only partly correlated, a diversified portfolio cuts delivery variance ~73% at similar expected verified removal versus the single best site."),
+    "fig_tier3_national": ("fig_tier3_national.png", "Figure 19. National public-investment optimizer (Appendix E): verified tonnes of removal delivered per US$1M of ocean-OAE spend, by nation and investment level. A physics-exempt storage baseline delivers 2-5x more per dollar for every nation; optimal MRV budget share ~31%."),
+    "fig_investor_model": ("fig_investor_model.png", "Figure 20. Private-investor real-options view (Appendix J): diversified expected return per pathway now versus if measurement matures, with commit-vs-wait timing. Only physics-exempt burial is positive today; mineral OAE is a ~4-year option; biomass and iron never clear."),
 }
 
 

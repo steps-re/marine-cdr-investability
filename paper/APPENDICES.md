@@ -91,7 +91,9 @@ binary probability of certification. `P(paid) uncond` ≈ P(clears|MRV @350) × 
 
 Every pathway has a low-single-digit-percent unconditional chance of being paid near-term: verification, not physics or cost, is the binding gate.
 
-## Appendix E — National EEZ efficiency (5-yr, investing nations + notable extremes)
+## Appendix E — National guidance: EEZ efficiency and the public-investment optimizer
+
+*(i) EEZ efficiency ranking.* Mean 5-yr atlas f_kin area-weighted over each sovereign EEZ (Marine Regions polygons; ≥20 resolved atlas cells; small samples indicative). The atlas has 78,687 valid cells globally but is sparse near coasts.
 
 | Sovereign | Mean f_kin (5yr) | cells | Investment level |
 |---|---|---|---|
@@ -108,6 +110,22 @@ Every pathway has a low-single-digit-percent unconditional chance of being paid 
 | Chile | 0.32 | 311 | engineered |
 | (top, uninvested) Guyana / Barbados | 0.83 | 20–27 | none |
 | (top, uninvested) Uruguay | 0.80 | 32 | none |
+
+*(ii) Public-investment optimizer (Tier-3, Fig. 19).* For each nation we allocate a fixed public budget between deploying its best-fit pathway and funding measurement, using the EEZ f_kin, the Appendix B priors and the near-term issuance model, and report the verified tonnes actually delivered per US$1M. Two robust findings hold across every nation: (a) the optimizer sends ~31% of budget to MRV rather than deployment, independent of water quality; (b) a physics-exempt baseline (terrestrial burial / direct ocean capture, ~6,800 verified t per $1M) delivers 2–5× more verified removal per dollar than ocean OAE.
+
+| Nation | EEZ f_kin | best-fit OAE | OAE verified t/$1M | exempt baseline t/$1M | OAE-vs-exempt | opt. MRV share | investor? |
+|---|---|---|---|---|---|---|---|
+| Guyana (best waters) | 0.83 | Mineral | 3,120 | 6,784 | 0.46 | 0.31 | no |
+| Barbados | 0.83 | Mineral | 3,073 | 6,863 | 0.45 | 0.31 | no |
+| Uruguay | 0.80 | Mineral | 2,924 | 6,911 | 0.42 | 0.31 | no |
+| Canada | 0.71 | Mineral | ~2,600 | ~6,800 | ~0.38 | 0.31 | yes |
+| United Kingdom | 0.69 | Mineral | ~2,540 | ~6,800 | ~0.37 | 0.31 | yes |
+| Norway | 0.68 | Mineral | ~2,500 | ~6,800 | ~0.37 | 0.31 | yes |
+| United States | 0.62 | Mineral | ~2,290 | ~6,800 | ~0.34 | 0.31 | yes |
+| India | 0.49 | Mineral | 1,805 | 6,786 | 0.27 | 0.31 | yes |
+| Chile | 0.32 | Mineral | 1,204 | 6,776 | 0.18 | 0.31 | yes |
+
+*(iii) Japan and New Zealand — the atlas blind spot.* The two are among the most active national investors, yet the atlas returns *zero* resolved cells in their EEZs (its ~690 CESM injection regions do not cover the western-Pacific coasts). This is itself a finding — the authoritative open-ocean atlas cannot advise two major programs — and it is the exact gap our offline GLORYS12 tracer fills. Within-EEZ physical retention from the tracer national maps is ~0.50 for Japan and ~0.84 for New Zealand (residence-based, not directly comparable to the atlas f_kin, and NZ carries a live social-license constraint after the Oceaneos iron-fertilization rejection). Read with the optimizer, the guidance is the same everywhere: fund measurement and the physics-exempt baseline first, and do not subsidize ocean-OAE deployment in waters that cannot deliver.
 
 ## Appendix F — Global investable-area, CORRECTED (% of open ocean clearing breakeven, 5-yr, conditional on verification)
 
@@ -155,3 +173,22 @@ This appendix reports a set of extensions built on the same GLORYS12/CMEMS/PyCO2
 **I.7 Portfolio diversification and the investment synthesis (Figs. 17–18).** Because sites' interannual delivery variability is only partially correlated (I.3), a diversified multi-site deployment is materially less risky than concentrating in the single best site: a minimum-variance / maximum-return-per-risk portfolio across our sites cuts delivery-variance by ~73% at similar expected verified removal (risk 0.024 vs 0.089 for the single-best site). Finally, an integrated 0–100 investability score fusing realization, verifiability, capacity, delivery reliability and retention (Fig. 18) places ~13% of announced contracted volume in below-median-score waters — real capital misallocation, though a more modest figure than the crediting gap of I.2, which remains the sector's starkest number.
 
 **Honest ledger.** Strong, load-bearing results: the crediting-realization gap (I.2), the decorrelation of physical controls (I.4), the drifter-validated currents (I.5, r=0.78), the carbonate-capacity ceiling (A.7), and the flushing/retention diagnostic (I.4). Deliberately demoted as weak or negative: the interannual climate-predictability (I.3, r≈0.3), the flushing–EKE relationship (I.5, r≈0.02), and the 13% misallocation (I.7). The offline model cannot resolve through-flow shelves; the atlas remains authoritative for absolute open-ocean efficiency. Primary added references: Jones et al. 2014 (GBC); Moras, Bach & Riebesell 2022 (Biogeosciences, the runaway-precipitation ceiling); Raymond et al. 2012 (river gas transfer); Laurindo, Mariano & Lumpkin 2017 (Deep-Sea Res. I, drifter climatology).
+
+## Appendix J — Private-investor playbook (real-options view)
+
+Because near-term expected value is set by verification, not siting, the private investor's problem is an options problem. We compute a diversified expected return per pathway under an explicit binary issuance gate, and a real-options commit-vs-wait schedule as issuance matures on a logistic path (12% discount rate). Relative-return units; US$350 per tonne unless noted.
+
+*(i) Expected value now, and if measurement matures (Fig. 20).*
+
+| Pathway | issuance now | EV now @$350 | EV if MRV matures | breakeven issuance | breakeven price @60% iss |
+|---|---|---|---|---|---|
+| Terrestrial burial (control) | 0.15 | **+0.77** | +5.98 | 0.09 | $59 |
+| Mineral OAE | 0.10 | −0.65 | +1.07 | 0.29 | $177 |
+| Electrochemical OAE | 0.075 | −0.84 | +0.27 | 0.48 | $275 |
+| Direct ocean capture / DOC | 0.03 | −0.95 | +0.01 | 0.59 | $353 |
+| Marine biomass sinking | 0.011 | −1.00 | −0.96 | n/a | n/a |
+| Iron fertilization | 0.011 | −1.00 | −0.98 | n/a | n/a |
+
+*(ii) Commit-vs-wait.* Only physics-exempt terrestrial burial is positive-EV today (commit now). Mineral OAE turns positive around year 4 and peaks around year 8 — **wait ~4 years** for issuance to mature (or for the price to reach ~$177). Electrochemical OAE is a ~7-year wait. DOC is not investable within ten years at $350. Biomass sinking and iron fertilization never reach positive value even with mature measurement, because cost and realized-removal efficiency dominate.
+
+*(iii) The playbook.* (1) **Triage by measurement path.** Fund near-field/engineered/mass-measured methods (DOC, wastewater alkalinity) now; treat far-field OAE as a dated option; avoid biomass and iron at any price. (2) **Fund MRV infrastructure, not deployment.** Marine CDR today is a negative-EV option whose value is dominated by issuance probability; the highest-return near-term capital is the measurement science and infrastructure that moves that probability. (3) **Diversify across decorrelated delivery risk.** A multi-site portfolio cuts delivery variance ~73% at equal expected removal (Appendix I.7), because sites' interannual efficiency is only partly correlated and not forecastable from climate modes (Appendix I.3). (4) **Stage against issuance maturity.** Hold options while issuance sits below ~15%; commit as each pathway clears its breakeven. The through-line: physics and cost decide *where* a method can work; verification decides *whether — and when —* anyone is paid, and it is the variable capital should be buying down. Model in `investor_model.py` (Tier-2) and `tier3_national.py` (Tier-3).
