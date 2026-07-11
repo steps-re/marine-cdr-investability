@@ -20,27 +20,14 @@ reported separately as issuance risk.
 """
 import numpy as np
 
-# eff_kind: 'atlas_oae' (location f_kin from atlas), 'pathway' (own eff prior), 'exempt' (=1)
-# Physics+cost analysis is CONDITIONAL ON ISSUANCE. The separate near-term binary issuance
-# probability (ISSUANCE_NEARTERM) is the dominant current-market gate (research literature/08:
-# only Planetary has ever issued; ~0.3% of contracted volume issued as of 2025-26).
-METHODS_V2 = {
-    "Mineral OAE": dict(cost=(30, 165), lca=(0.03, 0.12), eff_kind="atlas_oae", sensitive=True),
-    "Electrochemical OAE": dict(cost=(60, 200), lca=(0.04, 0.15), eff_kind="atlas_oae", sensitive=True),
-    "DOC / DIC stripping": dict(cost=(100, 400), lca=(0.08, 0.30), eff_kind="exempt", sensitive=False),
-    "Marine biomass sinking": dict(cost=(400, 3000), lca=(0.15, 0.50), eff=(0.05, 0.40),
-                                   eff_kind="pathway", sensitive=True),   # kelp ~25% central (lit/08)
-    "Terrestrial burial (control)": dict(cost=(14, 120), lca=(0.02, 0.08), eff_kind="exempt", sensitive=False),
-    "Iron fertilization": dict(cost=(100, 2000), lca=(0.05, 0.15), eff=(0.005, 0.05),
-                               eff_kind="pathway", sensitive=True),        # OIF ~2% central (lit/08)
-}
-
-# Near-term BINARY probability that a project actually gets credits issued (research literature/08).
-ISSUANCE_NEARTERM = {
-    "Mineral OAE": (0.05, 0.15), "Electrochemical OAE": (0.03, 0.12),
-    "DOC / DIC stripping": (0.01, 0.05), "Marine biomass sinking": (0.002, 0.02),
-    "Terrestrial burial (control)": (0.05, 0.25), "Iron fertilization": (0.001, 0.02),
-}
+# All editable per-method assumptions (cost, LCA penalty, efficiency, issuance) now live in
+# priors.py — a single documented assumption sheet meant to be edited by outside users
+# (e.g. a company plugging in an innovation that changes energy/LCA/cost). This module is the
+# math; priors.py is the numbers. See priors.py for units, provenance, and a worked example.
+try:
+    from .priors import METHODS_V2, ISSUANCE_NEARTERM        # package import
+except ImportError:
+    from priors import METHODS_V2, ISSUANCE_NEARTERM         # flat/script import
 
 
 def _ln(lo, hi, z):
