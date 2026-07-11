@@ -30,6 +30,25 @@ def fkin_at(lat, lon, horizon):
     return float(arr[j, i]), float(np.sqrt(d[j, i]))
 
 
+SCENARIOS = ["Literature range (full uncertainty)", "Optimistic", "Average / central", "Pessimistic"]
+
+
+def band(p10, p90, scenario, higher_better=False):
+    """Turn a (10th, 90th) prior into the (low, high) range for the chosen scenario.
+    higher_better=False for cost/LCA (low is good); True for efficiency/issuance (high is good).
+    """
+    g = float(np.sqrt(p10 * p90))                       # lognormal median
+    if scenario == "Literature range (full uncertainty)":
+        return (p10, p90)
+    if scenario == "Average / central":
+        return (round(g * 0.9, 4), round(g * 1.1, 4))
+    favorable_low = (p10, g)                             # the good half is the LOW half...
+    favorable_high = (g, p90)                            # ...or the HIGH half
+    if higher_better:
+        return favorable_high if scenario == "Optimistic" else favorable_low
+    return favorable_low if scenario == "Optimistic" else favorable_high
+
+
 PRESETS = {
     "Custom location": None,
     "Captura — Kona HI (DOC)": (19.7, -156.0),
@@ -53,6 +72,11 @@ with c1:
     atlas = (m.eff_kind == "atlas_oae")
     price = st.slider("Credit price ($/tCO₂)", 50, 600, 350, 10)
     horizon = st.selectbox("Realized-efficiency horizon (yr)", [1, 5, 10], index=1)
+    scenario = st.radio("Assumption scenario", SCENARIOS, index=0,
+                        help="Presets the cost / LCA / efficiency / issuance defaults. "
+                             "'Literature range' keeps the full 10th–90th-percentile uncertainty; "
+                             "Optimistic / Average / Pessimistic collapse toward the favorable, central, "
+                             "or unfavorable end. You can still fine-tune any value below.")
     if atlas:
         preset = st.selectbox("Location", list(PRESETS))
         if PRESETS[preset]:
@@ -66,29 +90,36 @@ with c1:
         st.info(f"{method}: efficiency is {kind}, so a map location does not set it.")
         lat, lon = 20.0, -156.0
 
+    # scenario-derived defaults (the user can still fine-tune each)
+    cost_d = band(float(m.cost_p10), float(m.cost_p90), scenario)
+    lca_d = band(float(m.lca_p10), float(m.lca_p90), scenario)
+    iss_d = band(float(m.issuance_p10), float(m.issuance_p90), scenario, higher_better=True)
+    kp = f"{method}|{scenario}"                         # key prefix: reset widgets when method/scenario changes
+
     st.markdown("---")
-    with st.expander("✎ Edit this method's assumptions — bring your own numbers"):
-        st.caption("These are the paper's literature priors, as (low, high) = 10th/90th-percentile ranges. "
-                   "Change any of them to model your own economics or an innovation, and everything updates live. "
-                   "Same numbers as src/priors.py; full guide in CUSTOMIZE.md (open repo).")
+    with st.expander(f"✎ Edit assumptions — {scenario.split(' (')[0]} defaults, tune freely"):
+        st.caption("These start from the paper's literature priors, collapsed to the scenario you picked, as "
+                   "(low, high) ranges. Change any of them to model your own economics or an innovation, and "
+                   "everything updates live. Same numbers as src/priors.py; full guide in CUSTOMIZE.md (open repo).")
         e1, e2 = st.columns(2)
         with e1:
-            c_lo = st.number_input("Gross cost — low ($/t)", 1.0, 5000.0, float(m.cost_p10), 1.0)
+            c_lo = st.number_input("Gross cost — low ($/t)", 1.0, 5000.0, float(cost_d[0]), 1.0, key=kp + "clo")
         with e2:
-            c_hi = st.number_input("Gross cost — high ($/t)", 1.0, 5000.0, float(m.cost_p90), 1.0)
+            c_hi = st.number_input("Gross cost — high ($/t)", 1.0, 5000.0, float(cost_d[1]), 1.0, key=kp + "chi")
         lca_lo, lca_hi = st.slider("Lifecycle-emissions penalty λ (fraction of removal lost)",
-                                   0.0, 0.9, (float(m.lca_p10), float(m.lca_p90)), 0.01)
+                                   0.0, 0.9, (float(lca_d[0]), float(lca_d[1])), 0.01, key=kp + "lca")
         st.caption("λ driver: " + priors.LCA_NOTES.get(method, ""))
         clo, chi = min(c_lo, c_hi), max(c_lo, c_hi)
         if chi <= clo:
             chi = clo * 1.05
         overrides = {"cost": (clo, chi), "lca": (lca_lo, lca_hi)}
         if m.eff_kind == "pathway":
+            eff_d = band(float(m.eff_p10), float(m.eff_p90), scenario, higher_better=True)
             eff_lo, eff_hi = st.slider("Realized-removal efficiency (fraction of gross)",
-                                       0.001, 0.95, (float(m.eff_p10), float(m.eff_p90)), 0.005)
+                                       0.001, 0.95, (float(eff_d[0]), float(eff_d[1])), 0.005, key=kp + "eff")
             overrides["eff"] = (eff_lo, eff_hi)
         iss_lo, iss_hi = st.slider("Near-term issuance probability (do you get paid yet)",
-                                   0.0005, 0.6, (float(m.issuance_p10), float(m.issuance_p90)), 0.005)
+                                   0.0005, 0.6, (float(iss_d[0]), float(iss_d[1])), 0.005, key=kp + "iss")
         overrides["issuance"] = (iss_lo, iss_hi)
 
 rng = np.random.default_rng(0)
