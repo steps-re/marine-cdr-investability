@@ -1,0 +1,15 @@
+region,winter_MLD_m,gradb_1e8,EKE_1e3,f_perm,role
+NWAustralia,55.9,0.813,8.937,0.378,holdout
+LabradorSea,50.8,2.134,2.987,0.377,fit
+Yongala,21.6,0.717,13.063,0.322,holdout
+NWPacific,101.9,0.522,27.933,0.3,fit
+CapeBasin,149.6,2.074,38.458,0.286,fit
+NewCaledonia,59.9,2.015,5.264,0.272,holdout
+RockallTrough,290.3,1.288,1.867,0.251,fit
+ACC_SMST,170.5,0.692,21.191,0.229,fit
+WestAtlantic,63.8,4.243,37.942,0.161,fit
+MarmaraSea,10.9,24.46,3.039,0.103,holdout
+ROAM_MIZ,116.4,0.5,0.203,0.001,holdout
+BassStrait,72.1,1.288,1.514,0.0,holdout
+Boknis,10.9,,0.639,0.0,holdout
+GotlandBasin,45.8,2.387,0.642,0.0,holdout

@@ -1,0 +1,2 @@
+region,n_days,H_winter_m,w_rms_native_m_day,w_rms_native_sd,w_rms_coarse_m_day,w_rms_coarse_sd,w_enhance_x,w_enhance_ci_lo,w_enhance_ci_hi,gross_down_native_m_day,gross_down_native_sd,gross_down_coarse_m_day,gross_down_coarse_sd,flux_enhance_x,flux_enhance_ci_lo,flux_enhance_ci_hi
+WestAtlantic_GulfStream,9,77.0,81.3,5.8,27.4,2.6,2.97,2.89,3.04,24.9,2.0,9.4,1.4,2.67,2.51,2.79
