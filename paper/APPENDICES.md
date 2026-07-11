@@ -58,6 +58,21 @@ Key anchors: Renforth & Henderson 2017; Fuss 2018; Strefler 2018; Foteinis 2023 
 
 **Near-term binary issuance probability (from the recent record; Fig. 4):** mineral OAE 5–15%, electrochemical OAE 3–12%, DOC 1–5%, marine biomass <2%, iron fertilization <2%, terrestrial burial 5–25%. Basis: only Planetary has ever had mCDR credits issued; ~0.3% of ~578,000 t contracted issued as of 2025–26; MRV can exceed 50% of project cost; issuance lifecycle 3–5 yr. Cost↔LCA priors sampled with correlation ρ≈0.5 (energy-intensive → both higher).
 
+## Appendix B.1 — Lifecycle-analysis basis for the λ_LCA penalty
+
+λ_LCA is the fraction of gross removal offset by the lifecycle emissions of building, powering, and operating a method (energy, materials, transport, process emissions). It enters the investability identity as the (1 − λ_LCA) term and is sampled *jointly* with cost (ρ ≈ 0.5: energy-intensive methods are both costlier and more emitting). Values are grid- and route-dependent; we use at-scale, decarbonizing-grid priors and widen the bands to span grid carbon intensity. Absent primary plant data, energy figures are route-level envelopes (an explicit uncertainty caveat), which is why the λ bands are wide.
+
+| Technology | Energy intensity (kWh/tCO₂) | Dominant LCA driver | λ_LCA (10–90) | Key source(s) |
+|---|---|---|---|---|
+| Mineral OAE (olivine) | 224–748 (grinding-dominated) | rock grinding + transport; grain size sets it | 0.03–0.12 | Foteinis 2023; Strefler 2018 |
+| Electrochemical OAE (BPED) | 650–1850 | electricity for bipolar-membrane electrodialysis; grid CO₂ | 0.04–0.15 (Isometric measured 5.27% on Planetary) | Eisaman 2012; Isometric deduction |
+| Direct ocean capture / DIC stripping | 380 (with H₂ credit) to >2500 (Equatic ~1.9 MWh/t without H₂) | electrolysis energy; H₂ co-product credit swings it | 0.08–0.30 | Eisaman 2018; Equatic disclosures |
+| Marine biomass sinking (macroalgae) | cultivation + harvest + vessel transport + sinking | vessel fuel and cultivation; plus an air–sea re-equilibration loss counted in *efficiency*, not λ | 0.15–0.50 | Coleman 2022; Bach 2021; Hurd 2024 |
+| Iron fertilization | low (iron dosing is cheap; ship time dominates) | ship time; the binding drag is efficiency (~2%), not λ | 0.05–0.15 | Ward 2025; Smetacek 2012 |
+| Terrestrial biomass burial (control) | low | harvest + burial logistics; preservation-limited | 0.02–0.08 | Zeng 2022, 2024 |
+
+Two points make the LCA appendix consistent with the efficiency and investability claims. First, for the two biological methods the binding drag on realized removal is *efficiency* (biomass central ~25%, iron ~2%; Appendix B), not λ_LCA, so their uninvestability is an efficiency-and-cost result that the LCA term only sharpens. Second, the electrochemical-OAE lifecycle is the best-measured case: Isometric's total 14.35% deduction on Planetary decomposes into interannual 8.90% + air–sea flux 6.51% + LCA 5.27% + a 2% buffer, so the λ_LCA prior for that archetype is anchored to a registry-grade measurement rather than a model. These priors feed every net-cost and breakeven figure in Appendix B, D and F.
+
 ## Appendix C — Water-body taxonomy
 
 | Water body | Coupling | Physics-sensitive | Atlas-resolved | Filter difference vs open ocean | Representative players |
