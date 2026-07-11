@@ -60,10 +60,16 @@ METHODS = {
 N_MC_DEFAULT = 20000
 
 
-def sample_method(name, n=N_MC_DEFAULT, rng=None):
-    """Return dict of MC-sampled parameter arrays for a method."""
+def sample_method(name, n=N_MC_DEFAULT, rng=None, overrides=None):
+    """Return dict of MC-sampled parameter arrays for a method.
+
+    `overrides` (optional dict) lets a user replace any prior for this run without editing
+    the code: e.g. overrides={"cost": (25, 120), "lca": (0.02, 0.06)} to model an innovation
+    that lowers cost and lifecycle emissions. Any key in the METHODS entry can be overridden
+    (cost, lca, mrv, yield_chem). This is what powers the Screener's in-browser editor.
+    """
     rng = rng or np.random.default_rng(0)
-    m = METHODS[name]
+    m = {**METHODS[name], **(overrides or {})}
     return {
         "cost": _lognorm_from_range(*m["cost"], n, rng),
         "lca": _lognorm_from_range(*m["lca"], n, rng, clip=(0.0, 0.9)),
@@ -80,14 +86,15 @@ def net_cost(sample, f_kin):
     return sample["cost"] / denom
 
 
-def physics_breakeven(name, price, n=N_MC_DEFAULT, rng=None, grid=None):
+def physics_breakeven(name, price, n=N_MC_DEFAULT, rng=None, grid=None, overrides=None):
     """
     Minimum f_kin at which P(net_cost < price) >= 0.5.
     Returns (breakeven_fkin or np.nan if never/always, f_kin_grid, p_investable_grid).
     For physics-insensitive methods, breakeven is 0 if median cost < price, else nan.
+    `overrides` forwards user-edited priors (see sample_method).
     """
     rng = rng or np.random.default_rng(1)
-    s = sample_method(name, n, rng)
+    s = sample_method(name, n, rng, overrides=overrides)
     grid = np.linspace(0.02, 1.0, 50) if grid is None else grid
     if not s["sensitive"]:
         p_inv = np.full_like(grid, float(np.mean(net_cost(s, 1.0) < price)))
