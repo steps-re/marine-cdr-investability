@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 data/
 *.nc
+paper/manuscript.html
+paper/manuscript.pdf
