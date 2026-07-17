@@ -56,8 +56,11 @@ location-dependent realized uptake."
 - China: ONCE program (no public budget); Microbial Carbon Pump concept (distinct from air-sea). Blue carbon +
   mariculture; leads ISO blue-carbon standards. Artificial upwelling demo Aoshan Bay Qingdao.
 - New Zealand: MBIE Endeavour NZ$11.02M/5yr "Catching Marine Carbon" (natural analogues, not deployment).
-  Assessment phase. GIGABLUE EPA REJECTION (late 2025): ruled illegal "dumping", not "scientific research";
-  55 kg modified trial ran Mar-Apr 2026. Key precedent: physics-independent legal filter.
+  Assessment phase. LEGAL PRECEDENT: NZ EPA rejected the OCEANEOS iron-fertilization application (May 2023,
+  world-first) as prohibited "dumping" not "scientific research" (commercial-intent test). Gigablue's S. Pacific
+  activity has been treated by the EPA as scientific research and is disputed/scrutinized, NOT the subject of that
+  ruling; a "Gigablue late-2025 dumping rejection + 55 kg Mar-Apr 2026 trial" appears in press but is UNCONFIRMED
+  and contradicts the fact-check (see paper/ADVERSARIAL_CHECK.md Claim 12). Key point holds: physics-independent legal filter.
 - Chile: OAE Patagonia (CINCO-Chile/Ocean Visions, Puerto Montt, mussel-shell alkalinity, funding undisclosed).
   Humboldt = strong CO2-outgassing region (~3.9-4.0 mol C/m2/yr), unflagged in Chilean planning. No CORFO line.
 - Australia: CSIRO CDR Roadmap Nov 2025 -- OAE only marine pathway modeled (up to 7 Mt/yr co-located desal
@@ -73,5 +76,5 @@ with national strategy. Private CDR capital peaked ~2023, contracted through 202
 
 ## Verify before publication
 US "LA-CDR" not a real project name (real SoCal = Captura/Calcarea); UK "SUERI" likely GGR Demonstrators (terrestrial);
-Iceland Carbfix EU grant amount; Norway Captura $15M is trade press; NZ Gigablue dates/drift news-sourced;
+Iceland Carbfix EU grant amount; Norway Captura $15M is trade press; NZ dumping precedent = OCEANEOS 2023 (confirmed), Gigablue late-2025 dumping claim news-sourced/UNCONFIRMED;
 negative "no equilibration filter" claims are full-text-search-verified, frame precisely.

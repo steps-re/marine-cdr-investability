@@ -40,7 +40,7 @@ NOTE the taxonomic split:
 | Company | Mechanism | Category | Geography | Claimed vs verified | Status |
 |---|---|---|---|---|---|
 | Running Tide | Kelp+limestone woodchips sunk >1000m | mixed/gated | N. Atlantic ~200mi off Iceland | ~22,000t "delivered" disputed | DEFUNCT Jun 2024 |
-| Gigablue (IL/NZ) | Buoyant particles (incl. iron) grow algae then sink | gated (de facto fertilization) | S. Pacific off NZ EEZ | 200,000 credits sold to SkiesFifty; unverified | Operating, disputed; NZ EPA rejected as "dumping" |
+| Gigablue (IL/NZ) | Buoyant particles (incl. iron) grow algae then sink | gated (de facto fertilization) | S. Pacific off NZ EEZ | 200,000 credits sold to SkiesFifty; unverified | Operating, disputed; EPA treats as research (the 2023 "dumping" rejection was Oceaneos, not Gigablue -- see ADVERSARIAL_CHECK Claim 12) |
 | Carboniferous | Ag residue (bagasse/stover) sunk into anoxic basin | STORAGE | Orca Basin Gulf of Mexico ~2400m | 20x1t bales research permit | Pilot/research (EPA permit ~Mar 2026) |
 | Rewind (IL) | Farm/timber/urban waste into anoxic seawater | STORAGE | Black Sea off Romania; Med off Haifa | 1Mt/yr by 2030 target | Pilot/research |
 | Seafields (UK) | Sargassum farmed then baled+sunk | gated | Tropical Atlantic/Caribbean gyre | once 1Gt/yr; no credits | Retreated 2024 |
