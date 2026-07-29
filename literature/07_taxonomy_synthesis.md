@@ -37,7 +37,7 @@ WORSE (stratified lids, outgassing) not better.
 ## New/less-known players surfaced (not in 02)
 Open ocean: Vycarb (NYC East River bicarbonate), Cestore (offshore-wind DOC), Carbon Time, Arbon Earth (bamboo OceanPods
 kelp), XoIS (iron, Gulf of Alaska research). Marginal: Rewind, CaspianCDR. Rivers: CarbonRun, UNDO. Wastewater: CREW.
-Tailings/mine: Arca Climate, Travertine, Exterra, Aquarry, Newmont-NREL REMineD.
+Tailings/mine: Arca Climate, Travertine, Exterra, Aquarry, Newmont-NLR REMineD.
 
 ## Registry protocols now spanning water bodies (Isometric leading)
 OAE (coastal outfalls), Wastewater Alkalinity Enhancement (WAE v1.2), River Alkalinity Enhancement (RAE), Electrolytic
